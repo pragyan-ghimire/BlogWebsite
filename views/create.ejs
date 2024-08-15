@@ -1,0 +1,25 @@
+<!-- including header here -->
+<%- include("partials/header.ejs") %>
+
+<form  class="mt-5" action="/post" method="post">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 text-bg-dark">
+                <div class="d-flex p-5 flex-column justify-content-center">
+                    <div class="mb-3">
+                        <label for="formControlInput1" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="formControlInput1" name="title" placeholder="&quot;Attitude of Lion&quot;">
+                      </div>
+                      <div class="mb-3">
+                        <label for="formControlTextarea1" class="form-label">Content</label>
+                        <textarea class="form-control" id="formControlTextarea1" name="content" rows="5"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-warning align-self-center">Submit</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</form>
+
+ <!-- including footer -->
+<%- include("partials/footer.ejs") %>
