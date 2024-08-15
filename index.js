@@ -17,8 +17,11 @@ app.get("/create",(req,res)=>{
 });
 
 app.post("/post",(req,res)=>{
-    res.render("index.ejs");
-    console.log(req.body["title"]);
+    res.render("index.ejs",{
+        title:req.body["title"],
+        content:req.body["content"],
+    });
+    // console.log(req.body["title"]);
 });
 
 app.listen(port,()=>{
