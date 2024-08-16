@@ -3,7 +3,8 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-
+let titles = [];
+let contents = [];
 
 app.use(express.static("public"));// for static contents
 app.use(bodyParser.urlencoded({extended:true}));
@@ -17,9 +18,11 @@ app.get("/create",(req,res)=>{
 });
 
 app.post("/post",(req,res)=>{
+    titles.push(req.body["title"]);
+    contents.push(req.body["content"]);
     res.render("index.ejs",{
-        title:req.body["title"],
-        content:req.body["content"],
+        title:titles,
+        content:contents,
     });
     // console.log(req.body["title"]);
 });
