@@ -10,14 +10,17 @@ app.use(express.static("public"));// for static contents
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/",(req,res)=>{
-    res.render("index.ejs");
+    res.render("index.ejs",{
+        title:titles,
+        content:contents
+    });
 });
 
 app.get("/create",(req,res)=>{
     res.render("create.ejs");
 });
 
-app.post("/post",(req,res)=>{
+app.post("/",(req,res)=>{
     titles.push(req.body["title"]);
     contents.push(req.body["content"]);
     res.render("index.ejs",{
