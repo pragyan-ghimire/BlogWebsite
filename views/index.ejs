@@ -18,7 +18,9 @@
             <p><%= content[i] %></p>
             <div class="align-self-end">
               <a href="/edit" class="actionBtn">Edit</a>
-              <a href="/delete" class="actionBtn">Delete</a>
+              <form action="/delete/<%= i %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                <button type="submit" class="actionBtn">Delete</button>
+            </form>            
             </div>
           </div>
         </div>

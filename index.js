@@ -30,6 +30,15 @@ app.post("/",(req,res)=>{
     // console.log(req.body["title"]);
 });
 
+app.post("/delete/:index",(req,res)=>{
+    const index = req.params.index;
+    titles.splice(index,1); // remove 1 element at index
+    contents.splice(index,1);
+    res.render("index.ejs",{
+        title:titles,
+        content:contents,
+    });
+});
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`);
 });
