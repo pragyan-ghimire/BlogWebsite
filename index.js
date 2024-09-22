@@ -54,7 +54,7 @@ app.post("/delete/:index",(req,res)=>{
     const index = req.params.index;
     titles.splice(index,1); // remove 1 element at index
     contents.splice(index,1);
-    console.log(titles);
+    // console.log(titles);
     res.render("index.ejs",{
         title:titles,
         content:contents,
