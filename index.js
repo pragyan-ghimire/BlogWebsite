@@ -38,6 +38,14 @@ app.get("/edit/:index",(req,res)=>{
         indexValue:index,
     });
 });
+
+app.get("/view",(req,res)=>{
+    res.render("index.ejs",{
+        view : true,
+        title:titles,
+    });
+});
+
 app.post("/update/:index",(req,res)=>{
     const index = req.params.index;
     titles.splice(index, 1, req.body["title"]);  // The first parameter is the index, the second is how many elements to remove, and the third is the new value.
