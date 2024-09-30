@@ -11,9 +11,6 @@
                     </p>
                     <div class="row align-self-end ">
                         <a href="/edit/<%= i %>" class="actionBtn col-6">Edit</a>
-                        <!-- <form action="/edit/<%= i %>" method="POST"">
-            <button type="submit" class="actionBtn">Edit</button>
-        </form>             -->
                         <form class="col-6" action="/delete/<%= i %>" method="POST"
                             onsubmit="return confirm('Are you sure you want to delete this item?');">
                             <button type="submit" class="actionBtn">Delete</button>
