@@ -39,6 +39,10 @@ Ensure you have the following installed on your local development machine:
 * Node.js (v18 or above) – [Download here](https://nodejs.org/en/download/package-manager)
 * npm (Node package manager) – Comes with Node.js
 * Code editor or IDE. Recommended - [Visual Studio Code](https://code.visualstudio.com/download)
+* Install nodemon globally:
+```bash
+  npm install -g nodemon
+```
 ### Installation
 
 Clone the project
